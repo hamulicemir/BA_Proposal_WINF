@@ -1,0 +1,8 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\nonumberline List of Figures}{1}{chapter*.7}%
+\contentsline {chapter}{\nonumberline List of Tables}{2}{chapter*.8}%
+\contentsline {chapter}{Documentation table of AI-based tools}{3}{section*.9}%
+\contentsline {chapter}{List of Abbreviations}{4}{section*.11}%
+\contentsline {chapter}{\numberline {A}Anhang A}{5}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Anhang B}{6}{appendix.B}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

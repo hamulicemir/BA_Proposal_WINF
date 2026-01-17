@@ -1,0 +1,132 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber,style=ieee,citestyle=numeric]{biblatex} % For citations
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{tabularx}
+\usepackage{array} % für bessere Spaltentypen
+\usepackage{booktabs}
+
+
+% Page setup
+\geometry{margin=1in}
+\setstretch{1.2}
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+
+% Bibliography
+\addbibresource{bibliography.bib}
+
+% --- Meta-Daten ---
+\newcommand{\studentid}{wi23b168}
+\newcommand{\studyprogram}{B.Sc. Business Informatics}
+\newcommand{\advisor}{Rohatsch Lukas, MSc}
+\newcommand{\university}{University of Applied Sciences Technikum Wien}
+\newcommand{\version}{0.1}
+
+
+% Title info
+\title{\textbf{Proposal Bachelor's Thesis}\\[0.5em]
+Development and Evaluation of a Hybrid Approach for Automated Error Detection and Classification in LoRaWAN-Based IoT Data Pipelines Using Log Data}
+\author{Emir Hamulic}
+\date{
+\university\\[1em]
+\small
+\textbf{Student ID:} \studentid\\
+\textbf{Study Program:} \studyprogram\\
+\textbf{Advisor:} \advisor\\
+\textbf{Version:} \version\\[0.5em]
+\textbf{Date:} \today
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem Area}
+
+\newpage
+
+\section{Task Description}
+
+\newpage
+
+\section{Research Questions / Hypotheses}
+\textbf{Main Research Question:}
+\textbf{Sub-Questions:}
+
+\newpage
+
+\section{Methodology}
+
+\newpage
+
+\section{Kind of expected results}
+
+\subsection{Overview Research Questions - Methodology - Expected Results}
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X
+            >{\raggedright\arraybackslash}X
+            >{\raggedright\arraybackslash}X}
+        \toprule
+        \textbf{Research questions / (hypotheses)} &
+        \textbf{Method(s) per research question}   &
+        \textbf{Expected kind of result per method}            \\
+        \midrule
+        RQ1: ...                                   & ... & ... \\
+        RQ1: ...                                   & ... & ... \\
+        RQ2: ...                                   & ... & ... \\
+        RQ3: ...                                   & ... & ... \\
+        RQ4: ...                                   & ... & ... \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Mapping research questions to methods and expected results.}
+\end{table}
+
+\newpage
+
+\section{Timetable}
+
+\subsection{Milestone Plan}
+
+\begin{table}[htbp]
+    \centering
+    \renewcommand{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{6pt}
+
+    \begin{tabularx}{\textwidth}{
+        >{\raggedright\arraybackslash}p{1.2cm}
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}X
+        >{\raggedright\arraybackslash}p{3.0cm}
+        >{\raggedright\arraybackslash}p{2.6cm}
+        }
+        \toprule
+        \textbf{Nr}         &
+        \textbf{Name}       &
+        \textbf{Plan}       &
+        \textbf{Adapted by} &
+        \textbf{Actual Date}                        \\
+        \midrule
+        M1                  & ... & ... & ... & ... \\
+        M2                  & ... & ... & ... & ... \\
+        M3                  & ... & ... & ... & ... \\
+        M4                  & ... & ... & ... & ... \\
+        M5                  & ... & ... & ... & ... \\
+        \bottomrule
+    \end{tabularx}
+
+    \caption{Milestones plan vs. actuals.}
+\end{table}
+
+% \printbibliography
+
+\end{document}
