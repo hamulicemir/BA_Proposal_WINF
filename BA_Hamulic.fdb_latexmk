@@ -1,14 +1,18 @@
 # Fdb version 4
-["biber BA_Hamulic"] 1768655568.74181 "BA_Hamulic.bcf" "BA_Hamulic.bbl" "BA_Hamulic" 1768656489.28007 0
-  "BA_Hamulic.bcf" 1768656489.24235 107338 a5c2244d7b57acefd0bf1e46426f62ac "pdflatex"
+["biber BA_Hamulic"] 1768676255.08783 "BA_Hamulic.bcf" "BA_Hamulic.bbl" "BA_Hamulic" 1768676255.59089 0
+  "BA_Hamulic.bcf" 1768676251.03257 108736 33055bb47e5fd16b0d71c3d30a72a961 "pdflatex"
+  "bibliography.bib" 1768676254.92212 4380 8dcb1b380ad5989fe212f2bf357aa328 ""
   (generated)
   "BA_Hamulic.bbl"
   "BA_Hamulic.blg"
   (rewritten before read)
-["pdflatex"] 1768656488.73501 "/Users/emirhamulic/Developer/dev/BA Proposal/BA_Hamulic.tex" "BA_Hamulic.pdf" "BA_Hamulic" 1768656489.2803 0
-  "/Users/emirhamulic/Developer/dev/BA Proposal/BA_Hamulic.tex" 1768656487.95832 3582 c4b0c3986713a432f7644aa226729b44 ""
+["pdflatex"] 1768676250.41873 "/Users/emirhamulic/Developer/dev/BA Proposal/BA_Hamulic.tex" "BA_Hamulic.pdf" "BA_Hamulic" 1768676255.59092 0
+  "/Users/emirhamulic/Developer/dev/BA Proposal/BA_Hamulic.tex" 1768676209.7951 7604 e8d32e3573ebd4fdfc1e15118f323e21 ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/tcti0800.tfm" 1136768653 2048 34c41bea24cdfcd7151cd817799f6952 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1136768653 1300 63a6111ee6274895728663cf4b4e7e81 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
@@ -20,11 +24,18 @@
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmti8.tfm" 1136768653 1504 1747189e0441d1c18f3ea56fafc1c480 ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1136768653 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb" 1248133631 32001 6aeea3afe875097b1eb0da29acd61e28 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1248133631 36118 fad905eba93cff5bce1e185fe980a177 ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb" 1248133631 24252 1e4e051947e12dfb50fee0b7f4e26e3a ""
+  "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb" 1215737283 187625 f02a8c2c788e6490af6fc4f5ed857a0c ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
@@ -87,11 +98,11 @@
   "/Users/emirhamulic/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1748092469 391621 145d7b34fb6343bd7f8c8cdf24c76d37 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1748092539 2217084 724cc9ba623cd373814252980537a9ed ""
   "/Users/emirhamulic/Library/TinyTeX/texmf.cnf" 1747070483.66895 637 edd806fb06a89761a6034e1968af9017 ""
-  "BA_Hamulic.aux" 1768656489.24118 1557 cfdc0ba1d939576b3987d642cb0aadb5 "pdflatex"
-  "BA_Hamulic.bbl" 1768655569.25973 466 76d65a242ec496c9b4361af646ff12cb "biber BA_Hamulic"
-  "BA_Hamulic.out" 1768656489.24157 1305 e8a571b75f8cdc68271b80a311084882 "pdflatex"
-  "BA_Hamulic.run.xml" 1768656489.24291 2413 eb071859c4aeeb84fc85f8d48e78b55a "pdflatex"
-  "BA_Hamulic.tex" 1768656487.95832 3582 c4b0c3986713a432f7644aa226729b44 ""
+  "BA_Hamulic.aux" 1768676251.03096 4314 92d69abf7d5dd8e4d9e9938ceacc5077 "pdflatex"
+  "BA_Hamulic.bbl" 1768676255.58042 19656 04051b7ee2fb872bafcc12886037f1e7 "biber BA_Hamulic"
+  "BA_Hamulic.out" 1768676251.03177 2448 ad0c9276f7dc283eb7b48f6085328183 "pdflatex"
+  "BA_Hamulic.run.xml" 1768676251.03315 2413 eb071859c4aeeb84fc85f8d48e78b55a "pdflatex"
+  "BA_Hamulic.tex" 1768676209.7951 7604 e8d32e3573ebd4fdfc1e15118f323e21 ""
   (generated)
   "BA_Hamulic.aux"
   "BA_Hamulic.bcf"

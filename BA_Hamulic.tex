@@ -49,6 +49,44 @@ Development and Evaluation of a Hybrid Approach for Automated Error Detection an
 \maketitle
 
 \section{Problem Area}
+\subsection{Operational Context}
+LoRaWAN-based IoT deployments are typically operated as distributed, multi-component systems.
+End devices communicate with gateways, which forward packets to a LoRaWAN Network Server (LNS). The LNS then routes data to application components or ETL-Pipelines which process data into structured data for databases or dashboards.
+This “star-of-stars” topology and the central role of the Network Server are core characteristics of LoRaWAN networks. \cite{LoRaAllianceLoRaWANv11}
+
+\subsection{Log Volume and Monitoring Limit}
+Modern IT and IoT backends generate very large volumes of logs. Multiple studies show that manual inspection becomes impractical at scale and is only possible to archive with automation of log analysis and diagnosis.
+
+Practitioner evidence reinforces this: in a large survey on log anomaly detection, practitioners explicitly cite the need to “efficiently analyze large volumes of log data,”
+and many expect tools to handle at least 100,000 logs while still delivering near-real-time results. \cite{Ma2024PractitionersLogAD}
+
+\subsection{Heterogenity and Missing Structure}
+Operational logs are typically semi-structured, highly heterogeneous, and produced by many components in an interleaved manner.
+A widely adopted first step in automated log analysis is log parsing (template extraction) to convert raw messages into structured events.
+
+Research further shows that diverse formatting and log types create significant challenges when applying ML methods directly to real-world logs, and that preprocessing/structuring decisions materially impact downstream analysis quality.\cite{He2017Drain}
+
+\subsection{Missing Prioritization}
+Raw logs typically provide neither a consistent prioritization scheme nor decision-support artifacts such as confidence estimates, rationale, or action guidance.
+In practice, this forces operators manually looking through and link alerts, driving up the MTTR and operational cost. \cite{Ma2024PractitionersLogAD}
+
+\subsection{Rule-Based Detection Systems}
+Rule-based systems and expert-defined patterns are effective for known signatures and for encoding domain knowledge, but they require ongoing effort and are limited when log messages vary substantially or new patterns appear.
+Early log anomaly detection often relied on rule-based or pattern-driven approaches, while recent work increasingly applies deep neural networks to learn normal behavior and handle patterns in log data.\cite{Landauer2023LogADSurvey}
+
+\subsection{ML-Based Detection}
+The ML component is primarily used as a mechanism to detect and prioritize \emph{unknown} events.
+Instead of requiring an explicit signature for each failure, anomaly detection techniques learn a baseline of normal log behavior and
+flag deviations for operational attention. \cite{Landauer2023LogADSurvey,Du2017DeepLog}
+This is particularly relevant for long-tail failures such as new stack traces, unexpected integration errors, or previously unseen combinations of events.\cite{Ma2024PractitionersExpectations}
+
+A Random Forest is a comparatively lightweight classifier for tabular log features. It aggregates many decision trees via majority vote and can output class probability estimates,
+which makes it suitable for operational classification without the complexity of deep models. \cite{Breiman2001RandomForests,sklearnRFClassifier}
+In a hybrid pipeline, these probability estimates can be used to implement a reject option for unknown events: if the maximum predicted class probability falls below a threshold, the event is tagged
+as \textit{Unknown} and routed to aggregation and rule-base enrichment. \cite{Breiman2001RandomForests,Vaze2022OSRClosedSet}
+
+To handle unknown-event in a hybrid classifier, the ML subsystem should not force every input into one of the known error classes.
+In open-set recognition, inputs from unseen classes must be rejected or mapped to an ``unknown'' category based on confidence or risk-aware decision rules. \cite{Scheirer2014OpenSet}
 
 \newpage
 
@@ -127,6 +165,6 @@ Development and Evaluation of a Hybrid Approach for Automated Error Detection an
     \caption{Milestones plan vs. actuals.}
 \end{table}
 
-% \printbibliography
+\printbibliography
 
 \end{document}

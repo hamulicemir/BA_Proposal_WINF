@@ -16,5 +16,478 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{LoRaAllianceLoRaWANv11}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=728f43e4074fb1df6b47be77a15f9604}{%
+           family={{LoRa Alliance}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{728f43e4074fb1df6b47be77a15f9604}
+      \strng{fullhash}{728f43e4074fb1df6b47be77a15f9604}
+      \strng{fullhashraw}{728f43e4074fb1df6b47be77a15f9604}
+      \strng{bibnamehash}{728f43e4074fb1df6b47be77a15f9604}
+      \strng{authorbibnamehash}{728f43e4074fb1df6b47be77a15f9604}
+      \strng{authornamehash}{728f43e4074fb1df6b47be77a15f9604}
+      \strng{authorfullhash}{728f43e4074fb1df6b47be77a15f9604}
+      \strng{authorfullhashraw}{728f43e4074fb1df6b47be77a15f9604}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online technical specification}
+      \field{note}{Accessed 2026-01-17}
+      \field{title}{{LoRaWAN\textsuperscript{®} Specification v1.1}}
+      \field{pages}{8}
+      \range{pages}{1}
+      \verb{urlraw}
+      \verb https://resources.lora-alliance.org/technical-specifications/lorawan-specification-v1-1
+      \endverb
+      \verb{url}
+      \verb https://resources.lora-alliance.org/technical-specifications/lorawan-specification-v1-1
+      \endverb
+    \endentry
+    \entry{Ma2024PractitionersLogAD}{misc}{}{}
+      \name{author}{8}{}{%
+        {{hash=a670b7abab581b68c6e6f86e57891bb0}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Xiaoxue},
+           giveni={X\bibinitperiod}}}%
+        {{hash=fd5e0d6c5105f20cb9485b810603d847}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yishu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=69d587f05c8a813f8013895aefcd8183}{%
+           family={Keung},
+           familyi={K\bibinitperiod},
+           given={Jacky},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f180cd4b8fde24b498399bd396ea92a0}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Xiao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=2cbf92d1f98276e427ec0525c93235cf}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Huiqi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=77454d4baaf8934f9e9d764df5fdef37}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=2614b15303c90b2d0cd71a78bd4ae168}{%
+           family={Sarro},
+           familyi={S\bibinitperiod},
+           given={Federica},
+           giveni={F\bibinitperiod}}}%
+        {{hash=da5b7b8e6c4783fac2351cb9c4f016c4}{%
+           family={Barr},
+           familyi={B\bibinitperiod},
+           given={Earl\bibnamedelima T.},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b52af62ff3ec336e083252adb3f9b286}
+      \strng{fullhash}{c51f703146c22e29c0a12edb895082b8}
+      \strng{fullhashraw}{c51f703146c22e29c0a12edb895082b8}
+      \strng{bibnamehash}{b52af62ff3ec336e083252adb3f9b286}
+      \strng{authorbibnamehash}{b52af62ff3ec336e083252adb3f9b286}
+      \strng{authornamehash}{b52af62ff3ec336e083252adb3f9b286}
+      \strng{authorfullhash}{c51f703146c22e29c0a12edb895082b8}
+      \strng{authorfullhashraw}{c51f703146c22e29c0a12edb895082b8}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.SE}
+      \field{eprinttype}{arXiv}
+      \field{howpublished}{arXiv preprint}
+      \field{title}{Practitioners' Expectations on Log Anomaly Detection}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 2}
+      \range{pages}{2}
+      \verb{eprint}
+      \verb 2412.01066
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2412.01066
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2412.01066
+      \endverb
+    \endentry
+    \entry{He2017Drain}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=7a3899b05fe89d81bde7cd496b988c16}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Pinjia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=fa3d04898970f061ddb4645c25b05fca}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Jieming},
+           giveni={J\bibinitperiod}}}%
+        {{hash=94aeb96f7bbdfa5f304dc958ab7f265c}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Zibin},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=89afa2af91c8dfa048fdcec740d6684e}{%
+           family={Lyu},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2114520c258cd871b6d57e1af260bd8e}
+      \strng{fullhash}{d2eb43d672c0a403ae2093e9e55d495f}
+      \strng{fullhashraw}{d2eb43d672c0a403ae2093e9e55d495f}
+      \strng{bibnamehash}{d2eb43d672c0a403ae2093e9e55d495f}
+      \strng{authorbibnamehash}{d2eb43d672c0a403ae2093e9e55d495f}
+      \strng{authornamehash}{2114520c258cd871b6d57e1af260bd8e}
+      \strng{authorfullhash}{d2eb43d672c0a403ae2093e9e55d495f}
+      \strng{authorfullhashraw}{d2eb43d672c0a403ae2093e9e55d495f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 IEEE International Conference on Web Services (ICWS)}
+      \field{title}{Drain: An Online Log Parsing Approach with Fixed Depth Tree}
+      \field{year}{2017}
+      \field{pages}{33\bibrangedash 40}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ICWS.2017.13
+      \endverb
+      \verb{urlraw}
+      \verb https://jiemingzhu.github.io/pub/pjhe_icws2017.pdf
+      \endverb
+      \verb{url}
+      \verb https://jiemingzhu.github.io/pub/pjhe_icws2017.pdf
+      \endverb
+    \endentry
+    \entry{Landauer2023LogADSurvey}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=c18662026c0fc68e7dac6025d881d9a2}{%
+           family={Landauer},
+           familyi={L\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=37d5fe4a795ea6a76be074d50d820ffd}{%
+           family={Onder},
+           familyi={O\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c29cdd77c994d74c6bdaf638e9a9d0f8}{%
+           family={Skopik},
+           familyi={S\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=cd4f532e6f0271688bf8e6bd3ca78e04}{%
+           family={Wurzenberger},
+           familyi={W\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa8e95a216cb82692510312c1f93f954}
+      \strng{fullhash}{054df42015d8e2dd652b5df44caa025a}
+      \strng{fullhashraw}{054df42015d8e2dd652b5df44caa025a}
+      \strng{bibnamehash}{054df42015d8e2dd652b5df44caa025a}
+      \strng{authorbibnamehash}{054df42015d8e2dd652b5df44caa025a}
+      \strng{authornamehash}{aa8e95a216cb82692510312c1f93f954}
+      \strng{authorfullhash}{054df42015d8e2dd652b5df44caa025a}
+      \strng{authorfullhashraw}{054df42015d8e2dd652b5df44caa025a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine Learning with Applications}
+      \field{title}{Deep learning for anomaly detection in log data: A survey}
+      \field{volume}{12}
+      \field{year}{2023}
+      \field{pages}{100470}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.mlwa.2023.100470
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666827023000233
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2666827023000233
+      \endverb
+    \endentry
+    \entry{Du2017DeepLog}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=6989be56341f6cbc885766e0dd067a4b}{%
+           family={Du},
+           familyi={D\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+        {{hash=65dc7c16174f4ebc47ccdc01e74939f2}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Feifei},
+           giveni={F\bibinitperiod}}}%
+        {{hash=5794422819f20abab5416b26ef567f74}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Guineng},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d353c169cbdb6171b51ab4026427e690}{%
+           family={Srikumar},
+           familyi={S\bibinitperiod},
+           given={Vivek},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c332f1edf158a734f1c6bb7e4700d17}
+      \strng{fullhash}{760efbdb5f6ee764f720cfc67b65c0c3}
+      \strng{fullhashraw}{760efbdb5f6ee764f720cfc67b65c0c3}
+      \strng{bibnamehash}{760efbdb5f6ee764f720cfc67b65c0c3}
+      \strng{authorbibnamehash}{760efbdb5f6ee764f720cfc67b65c0c3}
+      \strng{authornamehash}{9c332f1edf158a734f1c6bb7e4700d17}
+      \strng{authorfullhash}{760efbdb5f6ee764f720cfc67b65c0c3}
+      \strng{authorfullhashraw}{760efbdb5f6ee764f720cfc67b65c0c3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security (CCS '17)}
+      \field{title}{DeepLog: Anomaly Detection and Diagnosis from System Logs through Deep Learning}
+      \field{year}{2017}
+      \field{pages}{1285}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1145/3133956.3134015
+      \endverb
+    \endentry
+    \entry{Ma2024PractitionersExpectations}{misc}{}{}
+      \name{author}{8}{}{%
+        {{hash=a670b7abab581b68c6e6f86e57891bb0}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Xiaoxue},
+           giveni={X\bibinitperiod}}}%
+        {{hash=fd5e0d6c5105f20cb9485b810603d847}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Yishu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=69d587f05c8a813f8013895aefcd8183}{%
+           family={Keung},
+           familyi={K\bibinitperiod},
+           given={Jacky},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f180cd4b8fde24b498399bd396ea92a0}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Xiao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=2cbf92d1f98276e427ec0525c93235cf}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Huiqi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=77454d4baaf8934f9e9d764df5fdef37}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=2614b15303c90b2d0cd71a78bd4ae168}{%
+           family={Sarro},
+           familyi={S\bibinitperiod},
+           given={Federica},
+           giveni={F\bibinitperiod}}}%
+        {{hash=525078b8b9423badebfd035b304abc2e}{%
+           family={Barr},
+           familyi={B\bibinitperiod},
+           given={Earl},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{b52af62ff3ec336e083252adb3f9b286}
+      \strng{fullhash}{dfe483eba483348597658c7295886d6e}
+      \strng{fullhashraw}{dfe483eba483348597658c7295886d6e}
+      \strng{bibnamehash}{b52af62ff3ec336e083252adb3f9b286}
+      \strng{authorbibnamehash}{b52af62ff3ec336e083252adb3f9b286}
+      \strng{authornamehash}{b52af62ff3ec336e083252adb3f9b286}
+      \strng{authorfullhash}{dfe483eba483348597658c7295886d6e}
+      \strng{authorfullhashraw}{dfe483eba483348597658c7295886d6e}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Practitioners' Expectations on Log Anomaly Detection}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.48550/arXiv.2412.01066
+      \endverb
+      \verb{urlraw}
+      \verb https://www.researchgate.net/publication/386375463_Practitioners'_Expectations_on_Log_Anomaly_Detection
+      \endverb
+      \verb{url}
+      \verb https://www.researchgate.net/publication/386375463_Practitioners'_Expectations_on_Log_Anomaly_Detection
+      \endverb
+    \endentry
+    \entry{Breiman2001RandomForests}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=132b7100417675d55d5d4d8b244f7a34}{%
+           family={Breiman},
+           familyi={B\bibinitperiod},
+           given={Leo},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{fullhash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{fullhashraw}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{bibnamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorbibnamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authornamehash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorfullhash}{132b7100417675d55d5d4d8b244f7a34}
+      \strng{authorfullhashraw}{132b7100417675d55d5d4d8b244f7a34}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine Learning}
+      \field{number}{1}
+      \field{title}{Random Forests}
+      \field{volume}{45}
+      \field{year}{2001}
+      \field{pages}{5\bibrangedash 32}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1023/A:1010933404324
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.1023/A:1010933404324
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.1023/A:1010933404324
+      \endverb
+    \endentry
+    \entry{sklearnRFClassifier}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2ad72e574157d613a63fe8732cf468a8}{%
+           family={{scikit-learn developers}},
+           familyi={s\bibinitperiod}}}%
+      }
+      \strng{namehash}{2ad72e574157d613a63fe8732cf468a8}
+      \strng{fullhash}{2ad72e574157d613a63fe8732cf468a8}
+      \strng{fullhashraw}{2ad72e574157d613a63fe8732cf468a8}
+      \strng{bibnamehash}{2ad72e574157d613a63fe8732cf468a8}
+      \strng{authorbibnamehash}{2ad72e574157d613a63fe8732cf468a8}
+      \strng{authornamehash}{2ad72e574157d613a63fe8732cf468a8}
+      \strng{authorfullhash}{2ad72e574157d613a63fe8732cf468a8}
+      \strng{authorfullhashraw}{2ad72e574157d613a63fe8732cf468a8}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html}}
+      \field{note}{Accessed 2026-01-17}
+      \field{title}{RandomForestClassifier - scikit-learn documentation}
+    \endentry
+    \entry{Vaze2022OSRClosedSet}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=97f99f02379a86cf91b4c9aa29c47108}{%
+           family={Vaze},
+           familyi={V\bibinitperiod},
+           given={Sagar},
+           giveni={S\bibinitperiod}}}%
+        {{hash=735173e7254986d180bcb08fbac4266c}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod}}}%
+        {{hash=85ab53268da1006b51b453d57d3566f2}{%
+           family={Vedaldi},
+           familyi={V\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c72fc39e94030f67717052309266a44d}{%
+           family={Zisserman},
+           familyi={Z\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6392f900023ec8d8c9cab1fa29ff7800}
+      \strng{fullhash}{2dde341c2b2ed73d01446f4ab6cd7da5}
+      \strng{fullhashraw}{2dde341c2b2ed73d01446f4ab6cd7da5}
+      \strng{bibnamehash}{2dde341c2b2ed73d01446f4ab6cd7da5}
+      \strng{authorbibnamehash}{2dde341c2b2ed73d01446f4ab6cd7da5}
+      \strng{authornamehash}{6392f900023ec8d8c9cab1fa29ff7800}
+      \strng{authorfullhash}{2dde341c2b2ed73d01446f4ab6cd7da5}
+      \strng{authorfullhashraw}{2dde341c2b2ed73d01446f4ab6cd7da5}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Learning Representations (ICLR)}
+      \field{title}{Open-Set Recognition: A Good Closed-Set Classifier is All You Need?}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2110.06207
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2110.06207
+      \endverb
+    \endentry
+    \entry{Scheirer2014OpenSet}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e547075f859834a0eb2f4fc85270d348}{%
+           family={Scheirer},
+           familyi={S\bibinitperiod},
+           given={Walter\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=189f522197570f68b59e013fc96651ed}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Lalit\bibnamedelima P.},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=3455da12ac4a1fb40d190b5e7c9c95e4}{%
+           family={Boult},
+           familyi={B\bibinitperiod},
+           given={Terrance\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ebeef6fb4626eb74a95e58c3ed4cbea4}
+      \strng{fullhash}{5f1012db3a6f0451824dd0831177c03f}
+      \strng{fullhashraw}{5f1012db3a6f0451824dd0831177c03f}
+      \strng{bibnamehash}{5f1012db3a6f0451824dd0831177c03f}
+      \strng{authorbibnamehash}{5f1012db3a6f0451824dd0831177c03f}
+      \strng{authornamehash}{ebeef6fb4626eb74a95e58c3ed4cbea4}
+      \strng{authorfullhash}{5f1012db3a6f0451824dd0831177c03f}
+      \strng{authorfullhashraw}{5f1012db3a6f0451824dd0831177c03f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine Intelligence}
+      \field{number}{11}
+      \field{title}{Probability Models for Open Set Recognition}
+      \field{volume}{36}
+      \field{year}{2014}
+      \field{pages}{2317\bibrangedash 2324}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/TPAMI.2014.2321392
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/6809169
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/6809169
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

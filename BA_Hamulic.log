@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.5.24)  17 JAN 2026 14:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.5.24)  17 JAN 2026 19:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -527,6 +527,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 50.
 
+Overfull \hbox (0.88167pt too wide) in paragraph at lines 53--56
+\OT1/cmr/m/n/12 LoRaWAN-based IoT de-ploy-ments are typ-i-cally op-er-ated as dis-tributed, multi-component
+ []
+
+
 
 [1
 
@@ -540,30 +545,44 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [5]
 
-[6] (./BA_Hamulic.aux)
+[6]
+Overfull \hbox (3.63478pt too wide) in paragraph at lines 169--169
+\OT1/cmtt/m/n/12 net / publication / 386375463 _ Practitioners '[] _Expectations _ on _ Log _ Anomaly _
+ []
+
+
+
+[7{/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Overfull \hbox (96.25983pt too wide) in paragraph at lines 169--169
+\OT1/cmtt/m/n/12 / / scikit -[] learn . org / stable / modules / generated / sklearn . ensemble . RandomForestClassifier .
+ []
+
+
+
+[8] (./BA_Hamulic.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-29>
  ***********
 Package rerunfilecheck Info: File `BA_Hamulic.out' has not changed.
-(rerunfilecheck)             Checksum: E8A571B75F8CDC68271B80A311084882;1305.
+(rerunfilecheck)             Checksum: AD0C9276F7DC283EB7B48F6085328183;2448.
 Package logreq Info: Writing requests to 'BA_Hamulic.run.xml'.
 \openout1 = `BA_Hamulic.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 15910 strings out of 471528
- 283181 string characters out of 5518112
- 1100436 words of memory out of 5000000
- 42366 multiletter control sequences out of 15000+600000
- 632302 words of font info for 58 fonts, out of 8000000 for 9000
+ 16194 strings out of 471528
+ 289877 string characters out of 5518112
+ 1109222 words of memory out of 5000000
+ 42626 multiletter control sequences out of 15000+600000
+ 633847 words of font info for 63 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 63i,10n,67p,1234b,807s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on BA_Hamulic.pdf (6 pages, 83200 bytes).
+ 63i,10n,67p,1234b,1457s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb>
+Output written on BA_Hamulic.pdf (8 pages, 153042 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 203 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 
