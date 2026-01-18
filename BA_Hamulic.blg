@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'BA_Hamulic.blg'
+[44] biber:342> INFO - === Sun Jan 18, 2026, 15:25:00
+[53] Biber.pm:421> INFO - Reading 'BA_Hamulic.bcf'
+[110] Biber.pm:1002> INFO - Found 9 citekeys in bib section 0
+[120] Biber.pm:4487> INFO - Processing section 0
+[126] Biber.pm:4678> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[127] bibtex.pm:1713> INFO - LaTeX decoding ...
+[133] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[193] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[193] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[193] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[193] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[201] bbl.pm:676> INFO - Writing 'BA_Hamulic.bbl' with encoding 'UTF-8'
+[205] bbl.pm:779> INFO - Output to BA_Hamulic.bbl
+[205] Biber.pm:132> WARN - Duplicate entry key: 'Landauer2023LogADSurvey' in file 'bibliography.bib', skipping ...
+[205] Biber.pm:134> INFO - WARNINGS: 1

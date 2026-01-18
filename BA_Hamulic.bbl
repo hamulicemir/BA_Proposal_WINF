@@ -145,7 +145,6 @@
       \strng{authornamehash}{b52af62ff3ec336e083252adb3f9b286}
       \strng{authorfullhash}{c51f703146c22e29c0a12edb895082b8}
       \strng{authorfullhashraw}{c51f703146c22e29c0a12edb895082b8}
-      \field{extraname}{1}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -157,6 +156,9 @@
       \field{year}{2024}
       \field{pages}{1\bibrangedash 2}
       \range{pages}{2}
+      \verb{doi}
+      \verb 10.48550/arXiv.2412.01066
+      \endverb
       \verb{eprint}
       \verb 2412.01066
       \endverb
@@ -310,75 +312,6 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1145/3133956.3134015
-      \endverb
-    \endentry
-    \entry{Ma2024PractitionersExpectations}{misc}{}{}
-      \name{author}{8}{}{%
-        {{hash=a670b7abab581b68c6e6f86e57891bb0}{%
-           family={Ma},
-           familyi={M\bibinitperiod},
-           given={Xiaoxue},
-           giveni={X\bibinitperiod}}}%
-        {{hash=fd5e0d6c5105f20cb9485b810603d847}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Yishu},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=69d587f05c8a813f8013895aefcd8183}{%
-           family={Keung},
-           familyi={K\bibinitperiod},
-           given={Jacky},
-           giveni={J\bibinitperiod}}}%
-        {{hash=f180cd4b8fde24b498399bd396ea92a0}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={Xiao},
-           giveni={X\bibinitperiod}}}%
-        {{hash=2cbf92d1f98276e427ec0525c93235cf}{%
-           family={Zou},
-           familyi={Z\bibinitperiod},
-           given={Huiqi},
-           giveni={H\bibinitperiod}}}%
-        {{hash=77454d4baaf8934f9e9d764df5fdef37}{%
-           family={Yang},
-           familyi={Y\bibinitperiod},
-           given={Zhen},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=2614b15303c90b2d0cd71a78bd4ae168}{%
-           family={Sarro},
-           familyi={S\bibinitperiod},
-           given={Federica},
-           giveni={F\bibinitperiod}}}%
-        {{hash=525078b8b9423badebfd035b304abc2e}{%
-           family={Barr},
-           familyi={B\bibinitperiod},
-           given={Earl},
-           giveni={E\bibinitperiod}}}%
-      }
-      \strng{namehash}{b52af62ff3ec336e083252adb3f9b286}
-      \strng{fullhash}{dfe483eba483348597658c7295886d6e}
-      \strng{fullhashraw}{dfe483eba483348597658c7295886d6e}
-      \strng{bibnamehash}{b52af62ff3ec336e083252adb3f9b286}
-      \strng{authorbibnamehash}{b52af62ff3ec336e083252adb3f9b286}
-      \strng{authornamehash}{b52af62ff3ec336e083252adb3f9b286}
-      \strng{authorfullhash}{dfe483eba483348597658c7295886d6e}
-      \strng{authorfullhashraw}{dfe483eba483348597658c7295886d6e}
-      \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{month}{12}
-      \field{title}{Practitioners' Expectations on Log Anomaly Detection}
-      \field{year}{2024}
-      \verb{doi}
-      \verb 10.48550/arXiv.2412.01066
-      \endverb
-      \verb{urlraw}
-      \verb https://www.researchgate.net/publication/386375463_Practitioners'_Expectations_on_Log_Anomaly_Detection
-      \endverb
-      \verb{url}
-      \verb https://www.researchgate.net/publication/386375463_Practitioners'_Expectations_on_Log_Anomaly_Detection
       \endverb
     \endentry
     \entry{Breiman2001RandomForests}{article}{}{}

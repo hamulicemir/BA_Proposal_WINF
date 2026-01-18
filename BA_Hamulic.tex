@@ -60,12 +60,12 @@ End devices communicate with gateways, which forward packets to a LoRaWAN Networ
 This “star-of-stars” topology and the central role of the Network Server are core characteristics of LoRaWAN networks. \cite{LoRaAllianceLoRaWANv11}
 
 \subsection{Log Volume and Monitoring Limit}
-Modern IT and IoT backends generate very large volumes of logs. Manual inspection becomes impractical at scale and is only possible to archive with automation of log analysis and diagnosis. \cite{Oliner2012LogAnalysis}
+Modern IT and IoT backends generate very large volumes of logs. Manual inspection becomes impractical at scale therefore log analysis and diagnosis must be automated. \cite{Oliner2012LogAnalysis}
 
 Practitioner evidence reinforces this: in a large survey on log anomaly detection, practitioners explicitly cite the need to “efficiently analyze large volumes of log data,”
 and many expect tools to handle at least 100,000 logs while still delivering near-real-time results. \cite{Ma2024PractitionersLogAD}
 
-\subsection{Heterogenity and Missing Structure}
+\subsection{Heterogeneity and Missing Structure}
 Operational logs are typically semi-structured, highly heterogeneous, and produced by many components in an interleaved manner.
 A widely adopted first step in automated log analysis is log parsing (template extraction) to convert raw messages into structured events.
 
@@ -73,7 +73,7 @@ Research further shows that diverse formatting and log types create significant 
 
 \subsection{Missing Prioritization}
 Raw logs typically provide neither a consistent prioritization scheme nor decision-support artifacts such as confidence estimates, rationale, or action guidance.
-In practice, this forces operators manually looking through and link alerts, driving up the MTTR and operational cost. \cite{Ma2024PractitionersLogAD}
+In practice, this forces operators to manually inspect and link alerts, driving up the MTTR and operational cost. \cite{Ma2024PractitionersLogAD}
 
 \subsection{Rule-Based Detection Systems}
 Rule-based systems and expert-defined patterns are effective for known signatures and for encoding domain knowledge, but they require ongoing effort and are limited when log messages vary substantially or new patterns appear.
@@ -83,7 +83,7 @@ Early log anomaly detection often relied on rule-based or pattern-driven approac
 The ML component is primarily used as a mechanism to detect and prioritize \emph{unknown} events.
 Instead of requiring an explicit signature for each failure, anomaly detection techniques learn a baseline of normal log behavior and
 flag deviations for operational attention. \cite{Landauer2023LogADSurvey,Du2017DeepLog}
-This is particularly relevant for long-tail failures such as new stack traces, unexpected integration errors, or previously unseen combinations of events.\cite{Ma2024PractitionersExpectations}
+This is particularly relevant for long-tail failures such as new stack traces, unexpected integration errors, or previously unseen combinations of events.\cite{Ma2024PractitionersLogAD}
 
 A Random Forest is a comparatively lightweight classifier for tabular log features. It aggregates many decision trees via majority vote and can output class probability estimates,
 which makes it suitable for operational classification without the complexity of deep models. \cite{Breiman2001RandomForests}
@@ -97,7 +97,7 @@ In open-set recognition, inputs from unseen classes must be rejected or mapped t
 
 
 \section{Task Description}
-The core task of this thesis is to develop a proof-of-concept (PoC) system that automatically analyzes, classifies, and temporally aggregates LoRaWAN pipeline log data.
+The main aim of this thesis is to design and build a proof-of-concept (PoC) system that automatically analyzes, classifies, and temporally aggregates LoRaWAN pipeline log data.
 The PoC is implemented in Python and MariaDB is used primarily as a persistence layer for structured, classified, and aggregated events to enable queries for monitoring and reproducible evaluation.
 The aim of the PoC is to conduct a controlled comparison between three strategies using empirical metrics, under consideration of both classification quality and operational advantages.
 
@@ -119,7 +119,7 @@ The outcome of this thesis should be that readers are able to reproduce:
 \subsection{Work Steps}
 The work is organized into the following technical steps:
 \begin{enumerate}
-    \item \textbf{Parsing and Structuring:} Convert raw log lines into structured events for deterministic matching, ML features, and aggregation.
+    \item \textbf{Parsing and Structuring:} Convert raw log-lines into structured events for deterministic matching, ML features, and aggregation.
     \item \textbf{Labeling Strategy:} Define an operational error taxonomy (classes, examples, priorities) and a labeling approach for ML and evaluation.
     \item \textbf{Rule-Based Baseline:} Implement a deterministic detector that assigns classes and priorities for explicit, stable signatures. \textit{Unknown} events should be routed to a residual category.
     \item \textbf{ML-Based Classifier:} Implement an ML classifier with engineered features and calculate confidence estimates.
@@ -145,19 +145,19 @@ The work is organized into the following technical steps:
 \section{Research Questions / Hypotheses}
 
 \textbf{Main Research Question (MRQ):}\\
-How effective is a Python-based proof-of-concept for automated log analysis in LoRaWAN-based IoT data pipelines that enables a reproducible comparison of rule-based, ML-based, and hybrid approaches for error classification and temporal aggregation?
-
+How effective is a hybrid approach for automated error detection, classification and aggregation in LoRaWAN-based IoT data pipelines?
 \vspace{1em}
+
 \noindent\textbf{Sub Research Question 1 (SRQ1):}\\
-Which practically relevant error and warning classes can be derived from real LoRaWAN pipeline logs and formalized into a consistent class catalogue?
+Which practically relevant error and warning events can be identified from real LoRaWAN pipeline logs and formalized into a consistent class catalogue?
 
 \vspace{1em}
 \noindent\textbf{Sub Research Question 2 (SRQ2):}\\
-How do rule-based, ML-based, and hybrid approaches differ in measurable performance at log-line and time-window/incident level?
+How do rule-based, Machine Learning-based, and hybrid approaches differ in measurable performance at log-line and time-window/incident level?
 
 \vspace{1em}
 \noindent\textbf{Sub Research Question 3 (SRQ3):}\\
-Which error classes are better addressed by deterministic rules and which benefit more from ML-based classification, and which class characteristics explain these differences?
+Which error classes are better addressed by deterministic rules, which benefit more from Machine Learning–based classification, and which characteristics explain these differences?
 
 %\vspace{0.5em}
 %\textbf{Hypothesis (H1):}\\
@@ -176,7 +176,7 @@ The artifact is evaluated empirically and compared across three strategies.
 \subsubsection{SRQ1: Error and Warning Classes}
 \textbf{Methods: Qualitative content analysis and descriptive statistics.}\newline
 Log messages are reviewed to derive error and warning categories using inductive coding.
-The class list is consolidated with definitions, class boundaries, and priorities.
+The class list is consolidated with explicit definitions, class boundaries, and priorities.
 Descriptive statistics check relevance and coverage via class frequencies across components and time.\newline
 \textbf{Suitability:}
 SRQ1 builds a consistent taxonomy from logs and verifies that classes occur often enough to support automation.
@@ -184,7 +184,7 @@ SRQ1 builds a consistent taxonomy from logs and verifies that classes occur ofte
 \subsubsection{SRQ2: Performance Comparison}
 \textbf{Methods: Controlled comparative evaluation and quantitative measurement.}\newline
 The three detection strategies are evaluated under a fixed protocol with the same dataset, splits, and metrics.
-Two classes are used for testing. One consists of known classes, and the other is a novelty test created by withholding selected classes or templates during training.
+The novelty test is performed in the open-set setting, where a set of classes or log templates is held out in the training stage, and the methods are evaluated based on how well they are able to classify the held-out samples into the \textit{Unknown} class while maintaining a strong classification performance on the known classes.\cite{Scheirer2014OpenSet}
 Results are reported at log-line and time-window/incident level.\newline
 \textbf{Suitability:}
 SRQ2 requires objective, comparable results. A controlled setup ensures that any performance differences are due to the detection strategy, not to changes in the data, splits, or evaluation procedure.
@@ -203,7 +203,7 @@ SRQ3 translates empirical results into guidance by linking performance to charac
 Beyond the Research Question results, the thesis is expected to deliver these outputs:
 \begin{itemize}
     \item A technical introduction to LoRaWAN and the observed IoT data pipeline context.
-    \item A technical overview of ETL Pipelines and the advantages of logging.
+    \item A technical overview of ETL pipelines and the advantages of logging.
     \item A quantitative analysis of real LoRaWAN log data from the enterprise setting.
     \item A reproducible Python-based PoC for automated log classification and temporal aggregation, storing summaries in MariaDB.
     \item Structured error overview replacing raw logs.
@@ -214,15 +214,15 @@ The expected results of this thesis are structured by research question and foll
 \newline\newline
 For \textbf{SRQ1}, the qualitative content analysis of real LoRaWAN pipeline logs is expected to produce a class catalogue that is suitable for automated processing.
 The catalogue will define a bounded set of error and warning classes with meaningful priorities and clear class definitions.
-Descriptive statistics are expected to return a baseline of the observed log data, such as class frequencies and distributions over time and components.
+Descriptive statistics are expected to establish a baseline of the observed log data, such as class frequencies and distributions over time and across components.
 \newline\newline
-For \textbf{SRQ2}, the controlled comparative evaluation is expected to lead to a reproducible performance comparison between rule-based, ML-based, and hybrid approaches.
-This includes a standardized protocol, metric results at log-line level, and monitoring-oriented results at time-window or incident level.
-The outcome will provide measurable evidence of performance differences, including how confidence-based handling of \textit{Unknown} events affects both novelty detection and the quality on known classes.
+For \textbf{SRQ2}, a controlled comparative assessment is expected to provide a reproducible performance comparison between rule-based, ML-based, and hybrid approaches.
+This includes a standardized protocol, metric results at the log-line level, and monitoring oriented results at time-window or incident level.
+The outcome will provide measurable evidence of performance differences, including how confidence-based handling of \textit{Unknown} events affects both novelty detection and the whole quality for known classes.
 \newline\newline
 For \textbf{SRQ3}, the per-class analysis is expected to produce a mapping that explains which error classes are most effectively handled by rules, by ML, or by a hybrid strategy.
-The result will match observed performance patterns to class characteristics such as stability, variability, context and rarity.
-This is expected to give guidance for how to prioritize rule development, where ML adds operational value, or how this could be used for \textit{Unknown} cases as input for iterative refinement of the class catalogue and the rule base.
+The result will relate observed performance patterns to class characteristics such as stability, variability, context and rarity.
+This is expected to offer practiceable guidance on how to prioritize rule development, where ML adds operational value, or how this could be used for \textit{Unknown} cases as input for iterative refinement of the class catalogue and the rule base.
 
 \newpage
 
