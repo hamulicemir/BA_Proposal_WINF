@@ -11,6 +11,10 @@
 \usepackage{tabularx}
 \usepackage{array} % für bessere Spaltentypen
 \usepackage{booktabs}
+\usepackage{pgfgantt}
+\usepackage{graphicx}
+\usepackage{float}
+
 
 
 % Page setup
@@ -49,13 +53,14 @@ Development and Evaluation of a Hybrid Approach for Automated Error Detection an
 \maketitle
 
 \section{Problem Area}
+
 \subsection{Operational Context}
 LoRaWAN-based IoT deployments are typically operated as distributed, multi-component systems.
 End devices communicate with gateways, which forward packets to a LoRaWAN Network Server (LNS). The LNS then routes data to application components or ETL-Pipelines which process data into structured data for databases or dashboards.
 This “star-of-stars” topology and the central role of the Network Server are core characteristics of LoRaWAN networks. \cite{LoRaAllianceLoRaWANv11}
 
 \subsection{Log Volume and Monitoring Limit}
-Modern IT and IoT backends generate very large volumes of logs. Multiple studies show that manual inspection becomes impractical at scale and is only possible to archive with automation of log analysis and diagnosis.
+Modern IT and IoT backends generate very large volumes of logs. Manual inspection becomes impractical at scale and is only possible to archive with automation of log analysis and diagnosis. \cite{Oliner2012LogAnalysis}
 
 Practitioner evidence reinforces this: in a large survey on log anomaly detection, practitioners explicitly cite the need to “efficiently analyze large volumes of log data,”
 and many expect tools to handle at least 100,000 logs while still delivering near-real-time results. \cite{Ma2024PractitionersLogAD}
@@ -81,32 +86,147 @@ flag deviations for operational attention. \cite{Landauer2023LogADSurvey,Du2017D
 This is particularly relevant for long-tail failures such as new stack traces, unexpected integration errors, or previously unseen combinations of events.\cite{Ma2024PractitionersExpectations}
 
 A Random Forest is a comparatively lightweight classifier for tabular log features. It aggregates many decision trees via majority vote and can output class probability estimates,
-which makes it suitable for operational classification without the complexity of deep models. \cite{Breiman2001RandomForests,sklearnRFClassifier}
+which makes it suitable for operational classification without the complexity of deep models. \cite{Breiman2001RandomForests}
 In a hybrid pipeline, these probability estimates can be used to implement a reject option for unknown events: if the maximum predicted class probability falls below a threshold, the event is tagged
 as \textit{Unknown} and routed to aggregation and rule-base enrichment. \cite{Breiman2001RandomForests,Vaze2022OSRClosedSet}
 
-To handle unknown-event in a hybrid classifier, the ML subsystem should not force every input into one of the known error classes.
+To handle unknown events in a hybrid classifier, the ML subsystem should not force every input into one of the known error classes.
 In open-set recognition, inputs from unseen classes must be rejected or mapped to an ``unknown'' category based on confidence or risk-aware decision rules. \cite{Scheirer2014OpenSet}
 
 \newpage
 
+
 \section{Task Description}
+The core task of this thesis is to develop a proof-of-concept (PoC) system that automatically analyzes, classifies, and temporally aggregates LoRaWAN pipeline log data.
+The PoC is implemented in Python and MariaDB is used primarily as a persistence layer for structured, classified, and aggregated events to enable queries for monitoring and reproducible evaluation.
+The aim of the PoC is to conduct a controlled comparison between three strategies using empirical metrics, under consideration of both classification quality and operational advantages.
+
+\subsection{Objective}
+Manual log monitoring does not scale for high-volume and heterogeneous LoRaWAN pipeline logs and provides limited prioritization for incident events.
+Rule-based detection is precise for known signatures but struggles with message variability and previously unseen events.
+This work therefore evaluates whether an ML component and a rules-first hybrid strategy is able to improve automated classification and decision support compared to a rule-only method.
+
+\subsection{Target Audience}
+The target audience are technical stakeholders: IoT/backend engineers, applied Data/ML Engineers and operations/SRE roles, working with LoRaWAN data pipelines.
+The intended use is to provide a reproducible PoC workflow for structured and aggregated error views, and empirical evidence to select an appropriate detection strategy for specific error classes and operational requirements.
+
+\subsection{Expected Outcomes}
+The outcome of this thesis should be that readers are able to reproduce:
+(i) how to structure LoRaWAN pipeline logs into machine-processable events,
+(ii) how to implement a rule-based baseline,
+(iii) how to train and apply an ML classifier with confidence-based handling of \textit{Unknown} events.
+
+\subsection{Work Steps}
+The work is organized into the following technical steps:
+\begin{enumerate}
+    \item \textbf{Parsing and Structuring:} Convert raw log lines into structured events for deterministic matching, ML features, and aggregation.
+    \item \textbf{Labeling Strategy:} Define an operational error taxonomy (classes, examples, priorities) and a labeling approach for ML and evaluation.
+    \item \textbf{Rule-Based Baseline:} Implement a deterministic detector that assigns classes and priorities for explicit, stable signatures. \textit{Unknown} events should be routed to a residual category.
+    \item \textbf{ML-Based Classifier:} Implement an ML classifier with engineered features and calculate confidence estimates.
+    \item \textbf{Hybrid Decision Logic:} Implement a rules-first policy including confidence-based handling of \textit{Unknown} events via a reject option.
+    \item \textbf{Temporal Aggregation and Storage:} Aggregate classified events over time windows and store summaries for monitoring in MariaDB (counts per class, affected entities, confidence statistics).
+    \item \textbf{Evaluation Setup:} Define a clear test protocol with two complementary scenarios:
+          \begin{itemize}
+              \item \textit{Known-classes test (closed-set):} evaluate how well rule-based, ML-based, and hybrid approaches classify log events into the predefined error classes.
+              \item \textit{Novelty test (open-set):} create a controlled ``unknown'' test set by holding out selected classes or log templates during training; evaluate whether the approaches correctly assign these cases to \textit{Unknown} while still classifying the remaining known cases reliably.
+          \end{itemize}
+
+    \item \textbf{Empirical Comparison and Reporting:} Compare rule-based, ML-based, and hybrid approaches with metrics at two levels:
+          \begin{enumerate}
+              \item  logline level with precision/recall/F1 and confusion analysis
+              \item time-window/incident level with quality of aggregated summaries
+          \end{enumerate}
+          The novelty test reports \textit{Unknown-Recall} and \textit{False-Reject Rate}. The results are summarized and could be used for guidance on when rules, ML, or a hybrid approach is most suitable.
+\end{enumerate}
 
 \newpage
+
 
 \section{Research Questions / Hypotheses}
-\textbf{Main Research Question:}
-\textbf{Sub-Questions:}
+
+\textbf{Main Research Question (MRQ):}\\
+How effective is a Python-based proof-of-concept for automated log analysis in LoRaWAN-based IoT data pipelines that enables a reproducible comparison of rule-based, ML-based, and hybrid approaches for error classification and temporal aggregation?
+
+\vspace{1em}
+\noindent\textbf{Sub Research Question 1 (SRQ1):}\\
+Which practically relevant error and warning classes can be derived from real LoRaWAN pipeline logs and formalized into a consistent class catalogue?
+
+\vspace{1em}
+\noindent\textbf{Sub Research Question 2 (SRQ2):}\\
+How do rule-based, ML-based, and hybrid approaches differ in measurable performance at log-line and time-window/incident level?
+
+\vspace{1em}
+\noindent\textbf{Sub Research Question 3 (SRQ3):}\\
+Which error classes are better addressed by deterministic rules and which benefit more from ML-based classification, and which class characteristics explain these differences?
+
+%\vspace{0.5em}
+%\textbf{Hypothesis (H1):}\\
+%Compared to a rule-only baseline, a rules-first hybrid approach achieves higher overall utility (e.g., macro-averaged F1 at log-line level and/or improved window/incident-level metrics), while maintaining comparable precision for classes with clear and stable signatures.
 
 \newpage
-
 \section{Methodology}
 
-\newpage
+\subsection{Research Design}
+This thesis follows an engineering-oriented research design combining \textit{prototyping} with \textit{quantitative data analysis} and \textit{literature reviews}.
+The core artifact is a Python-based proof-of-concept (PoC) that transforms raw LoRaWAN pipeline logs into structured, classified, and temporally aggregated events.
+The artifact is evaluated empirically and compared across three strategies.
 
+\subsection{Methods per Research Question}
+
+\subsubsection{SRQ1: Error and Warning Classes}
+\textbf{Methods: Qualitative content analysis and descriptive statistics.}\newline
+Log messages are reviewed to derive error and warning categories using inductive coding.
+The class list is consolidated with definitions, class boundaries, and priorities.
+Descriptive statistics check relevance and coverage via class frequencies across components and time.\newline
+\textbf{Suitability:}
+SRQ1 builds a consistent taxonomy from logs and verifies that classes occur often enough to support automation.
+
+\subsubsection{SRQ2: Performance Comparison}
+\textbf{Methods: Controlled comparative evaluation and quantitative measurement.}\newline
+The three detection strategies are evaluated under a fixed protocol with the same dataset, splits, and metrics.
+Two classes are used for testing. One consists of known classes, and the other is a novelty test created by withholding selected classes or templates during training.
+Results are reported at log-line and time-window/incident level.\newline
+\textbf{Suitability:}
+SRQ2 requires objective, comparable results. A controlled setup ensures that any performance differences are due to the detection strategy, not to changes in the data, splits, or evaluation procedure.
+
+\subsubsection{SRQ3: Suitability of Rules and ML by Error Class}
+\textbf{Methods: Per-class analysis and deductive interpretation.}\newline
+SRQ2 results are analyzed per error class and related to class characteristics such as stability, variability and rarity.
+This supports assessing whether rules, ML, or a hybrid approach fits best per class.\newline
+\textbf{Suitability:}
+SRQ3 translates empirical results into guidance by linking performance to characteristics.
+
+\newpage
 \section{Kind of expected results}
 
-\subsection{Overview Research Questions - Methodology - Expected Results}
+\subsection{Expected Project Outputs}
+Beyond the Research Question results, the thesis is expected to deliver these outputs:
+\begin{itemize}
+    \item A technical introduction to LoRaWAN and the observed IoT data pipeline context.
+    \item A technical overview of ETL Pipelines and the advantages of logging.
+    \item A quantitative analysis of real LoRaWAN log data from the enterprise setting.
+    \item A reproducible Python-based PoC for automated log classification and temporal aggregation, storing summaries in MariaDB.
+    \item Structured error overview replacing raw logs.
+\end{itemize}
+
+\subsection{Expected Results of the Research Questions}
+The expected results of this thesis are structured by research question and follow directly from the selected methods and the developed PoC artifact.
+\newline\newline
+For \textbf{SRQ1}, the qualitative content analysis of real LoRaWAN pipeline logs is expected to produce a class catalogue that is suitable for automated processing.
+The catalogue will define a bounded set of error and warning classes with meaningful priorities and clear class definitions.
+Descriptive statistics are expected to return a baseline of the observed log data, such as class frequencies and distributions over time and components.
+\newline\newline
+For \textbf{SRQ2}, the controlled comparative evaluation is expected to lead to a reproducible performance comparison between rule-based, ML-based, and hybrid approaches.
+This includes a standardized protocol, metric results at log-line level, and monitoring-oriented results at time-window or incident level.
+The outcome will provide measurable evidence of performance differences, including how confidence-based handling of \textit{Unknown} events affects both novelty detection and the quality on known classes.
+\newline\newline
+For \textbf{SRQ3}, the per-class analysis is expected to produce a mapping that explains which error classes are most effectively handled by rules, by ML, or by a hybrid strategy.
+The result will match observed performance patterns to class characteristics such as stability, variability, context and rarity.
+This is expected to give guidance for how to prioritize rule development, where ML adds operational value, or how this could be used for \textit{Unknown} cases as input for iterative refinement of the class catalogue and the rule base.
+
+\newpage
+
+\subsection{Overview: Research Questions, Methods, and Expected Result Types}
 
 \begin{table}[htbp]
     \centering
@@ -115,56 +235,89 @@ In open-set recognition, inputs from unseen classes must be rejected or mapped t
             >{\raggedright\arraybackslash}X
             >{\raggedright\arraybackslash}X}
         \toprule
-        \textbf{Research questions / (hypotheses)} &
-        \textbf{Method(s) per research question}   &
-        \textbf{Expected kind of result per method}            \\
+        \textbf{Research questions / hypothesis}                                                                                                                                              &
+        \textbf{Method(s)}                                                                                                                                                                    &
+        \textbf{Expected kind of result}                                                                                                                                                        \\
         \midrule
-        RQ1: ...                                   & ... & ... \\
-        RQ1: ...                                   & ... & ... \\
-        RQ2: ...                                   & ... & ... \\
-        RQ3: ...                                   & ... & ... \\
-        RQ4: ...                                   & ... & ... \\
+        SRQ1: Which practically relevant error and warning classes can be derived from real LoRaWAN pipeline logs and formalized into a consistent class catalogue?                           &
+        Qualitative content analysis; descriptive statistics                                                                                                                                  &
+        A class catalogue with clear definitions, boundaries and priorities including representative log patterns.                                                                              \\
+        \midrule
+        SRQ2: How do rule-based, ML-based, and hybrid approaches differ in measurable performance at log-line and time-window/incident level?                                                 &
+        Controlled comparative evaluation; quantitative performance measurement                                                                                                               &
+        An empirical comparison report including per-class metrics on log-line level and monitoring-oriented evaluation on time-window/incident level for all three approaches.                 \\
+        \midrule
+        SRQ3: Which error classes are better addressed by deterministic rules and which benefit more from ML-based classification, and which class characteristics explain these differences? &
+        Per-class analysis; deductive interpretation                                                                                                                                          &
+        An evidence-based suitability mapping of error classes to detection strategy, with explanations based on observable class characteristics.                                              \\
+        %\midrule
+        %H1: Compared to a rule-only baseline, a rules-first hybrid approach achieves higher overall utility while maintaining comparable precision for stable-signature classes.              &
+        %$Hypothesis testing via SRQ2 metrics and SRQ3 interpretation                                                                                                                           &
+        %A quantified assessment of hypothesis support, including identified trade-offs such as improvements in overall utility and potential impacts on precision for signature-based classes.  \\
         \bottomrule
     \end{tabularx}
-    \caption{Mapping research questions to methods and expected results.}
+    \caption{Mapping research questions to methods and expected result types.}
 \end{table}
+
+
 
 \newpage
 
 \section{Timetable}
 
 \subsection{Milestone Plan}
-
 \begin{table}[htbp]
     \centering
     \renewcommand{\arraystretch}{1.2}
     \setlength{\tabcolsep}{6pt}
-
     \begin{tabularx}{\textwidth}{
-        >{\raggedright\arraybackslash}p{1.2cm}
-        >{\raggedright\arraybackslash}X
-        >{\raggedright\arraybackslash}X
-        >{\raggedright\arraybackslash}p{3.0cm}
-        >{\raggedright\arraybackslash}p{2.6cm}
+        >{\raggedright\arraybackslash}p{0.5cm}
+        >{\raggedright\arraybackslash}p{6.8cm}
+        >{\raggedright\arraybackslash}p{2.5cm}
+        >{\raggedright\arraybackslash}p{2cm}
+        >{\raggedright\arraybackslash}p{2cm}
         }
         \toprule
         \textbf{Nr}         &
         \textbf{Name}       &
         \textbf{Plan}       &
         \textbf{Adapted by} &
-        \textbf{Actual Date}                        \\
+        \textbf{Actual Date}                                                             \\
         \midrule
-        M1                  & ... & ... & ... & ... \\
-        M2                  & ... & ... & ... & ... \\
-        M3                  & ... & ... & ... & ... \\
-        M4                  & ... & ... & ... & ... \\
-        M5                  & ... & ... & ... & ... \\
+        M1                  & Proposal approved                   & 31.01.2026 & -- & -- \\
+        M2                  & Literature review completed         & 02.03.2026 & -- & -- \\
+        M3                  & Data preparation completed          & 12.03.2026 & -- & -- \\
+        M4                  & PoC implementation completed        & 01.04.2026 & -- & -- \\
+        M5                  & Partial submission and presentation & 10.04.2026 & -- & -- \\
+        M6                  & Complete first version handed in    & 01.05.2026 & -- & -- \\
+        M7                  & Final thesis version handed in      & 22.05.2026 & -- & -- \\
         \bottomrule
     \end{tabularx}
-
-    \caption{Milestones plan vs. actuals.}
+    \caption{Milestone plan vs.\ actuals.}
 \end{table}
 
-\printbibliography
 
+\subsection{Project Plan (Gantt Chart)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{img/gantt-chart.png}
+    \caption{Project plan (Gantt chart).}
+\end{figure}
+\newpage
+
+\newpage
+\clearpage
+
+\listoftables
+\vspace{1em}
+\listoffigures
+
+
+\newpage
+
+
+\newpage
+
+
+\printbibliography
 \end{document}

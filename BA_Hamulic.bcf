@@ -2374,18 +2374,18 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">LoRaAllianceLoRaWANv11</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Ma2024PractitionersLogAD</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">He2017Drain</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">Ma2024PractitionersLogAD</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">Landauer2023LogADSurvey</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">Oliner2012LogAnalysis</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Ma2024PractitionersLogAD</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">He2017Drain</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Ma2024PractitionersLogAD</bcf:citekey>
     <bcf:citekey order="6" intorder="1">Landauer2023LogADSurvey</bcf:citekey>
-    <bcf:citekey order="6" intorder="2">Du2017DeepLog</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Ma2024PractitionersExpectations</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Breiman2001RandomForests</bcf:citekey>
-    <bcf:citekey order="8" intorder="2">sklearnRFClassifier</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">Landauer2023LogADSurvey</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">Du2017DeepLog</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Ma2024PractitionersExpectations</bcf:citekey>
     <bcf:citekey order="9" intorder="1">Breiman2001RandomForests</bcf:citekey>
-    <bcf:citekey order="9" intorder="2">Vaze2022OSRClosedSet</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">Scheirer2014OpenSet</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Breiman2001RandomForests</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">Vaze2022OSRClosedSet</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Scheirer2014OpenSet</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
