@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber BA_Hamulic"] 1768746299.79912 "BA_Hamulic.bcf" "BA_Hamulic.bbl" "BA_Hamulic" 1768764125.80139 0
-  "BA_Hamulic.bcf" 1768764125.71959 108808 d4ee5d797863a4e3868684991fcdfc3b "pdflatex"
+["biber BA_Hamulic"] 1768746299.79912 "BA_Hamulic.bcf" "BA_Hamulic.bbl" "BA_Hamulic" 1768765242.48034 0
+  "BA_Hamulic.bcf" 1768765242.40931 108808 d4ee5d797863a4e3868684991fcdfc3b "pdflatex"
   "bibliography.bib" 1768745901.4503 4024 c123a978aa7ab5e3e2df28112cf05ba2 ""
   (generated)
   "BA_Hamulic.bbl"
   "BA_Hamulic.blg"
   (rewritten before read)
-["pdflatex"] 1768764124.53738 "/Users/emirhamulic/Developer/dev/BA Proposal/BA_Hamulic.tex" "BA_Hamulic.pdf" "BA_Hamulic" 1768764125.80169 0
-  "/Users/emirhamulic/Developer/dev/BA Proposal/BA_Hamulic.tex" 1768764124.25773 20600 b4af4141ed45b7e11daf16d602ec3c08 ""
+["pdflatex"] 1768765241.47279 "/Users/emirhamulic/Developer/dev/BA Proposal/BA_Hamulic.tex" "BA_Hamulic.pdf" "BA_Hamulic" 1768765242.48058 0
+  "/Users/emirhamulic/Developer/dev/BA Proposal/BA_Hamulic.tex" 1768765240.12666 20775 ee67a3821d55b46bc83a617c5b087fef ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/tcti0800.tfm" 1136768653 2048 34c41bea24cdfcd7151cd817799f6952 ""
@@ -186,13 +186,13 @@
   "/Users/emirhamulic/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1748092469 391621 145d7b34fb6343bd7f8c8cdf24c76d37 ""
   "/Users/emirhamulic/Library/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1748092539 2217084 724cc9ba623cd373814252980537a9ed ""
   "/Users/emirhamulic/Library/TinyTeX/texmf.cnf" 1747070483.66895 637 edd806fb06a89761a6034e1968af9017 ""
-  "BA_Hamulic.aux" 1768764125.71789 6058 43d1d6b550cb831c2c32ddca1d1dd0e7 "pdflatex"
+  "BA_Hamulic.aux" 1768765242.40665 6059 ba506ab634e984ee59374ac94847f73b "pdflatex"
   "BA_Hamulic.bbl" 1768746300.40093 17652 c9dc06776c57a1c2ca42171c586b88b7 "biber BA_Hamulic"
-  "BA_Hamulic.lof" 1768764125.72024 97 5ed9a399a74fdce546beb2364c04b967 "pdflatex"
-  "BA_Hamulic.lot" 1768764125.7202 228 7bd8e68e4cd6446fd5c04634473b4a51 "pdflatex"
-  "BA_Hamulic.out" 1768764125.71879 4841 a59b9d8d4d9eeebb500f9b98f80c3b28 "pdflatex"
-  "BA_Hamulic.run.xml" 1768764125.72015 2413 eb071859c4aeeb84fc85f8d48e78b55a "pdflatex"
-  "BA_Hamulic.tex" 1768764124.25773 20600 b4af4141ed45b7e11daf16d602ec3c08 ""
+  "BA_Hamulic.lof" 1768765242.41001 97 5ed9a399a74fdce546beb2364c04b967 "pdflatex"
+  "BA_Hamulic.lot" 1768765242.40997 228 7bd8e68e4cd6446fd5c04634473b4a51 "pdflatex"
+  "BA_Hamulic.out" 1768765242.4083 4843 bc0b3c6e670b1ac61781569bd4c7b0d7 "pdflatex"
+  "BA_Hamulic.run.xml" 1768765242.40991 2413 eb071859c4aeeb84fc85f8d48e78b55a "pdflatex"
+  "BA_Hamulic.tex" 1768765240.12666 20775 ee67a3821d55b46bc83a617c5b087fef ""
   "img/gantt-chart.png" 1768741464.83951 163534 7f5d1df85c11eed8f9d47f610e70a9c8 ""
   (generated)
   "BA_Hamulic.aux"

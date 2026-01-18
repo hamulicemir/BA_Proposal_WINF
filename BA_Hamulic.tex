@@ -78,8 +78,8 @@ This forces operators to manually inspect and link alerts, which is driving up t
 Rule-based systems are effective for known patterns, but they require effort and are limited when log messages are variable or completely new patterns appear.
 Initial approaches to log anomaly detection relied mainly on manually defined rules. More recent studies favor deep neural networks that model normal log behavior and identify deviations.\cite{Landauer2023LogADSurvey}
 
-\subsection{ML-Based Detection}
-The ML component is primarily used as a mechanism to detect and prioritize \emph{unknown} events.
+\subsection{Machine Learning-Based Detection}
+The Machine Learning component is primarily used as a mechanism to detect and prioritize \emph{unknown} events.
 Anomaly detection methods identify outliers for operational attention by learning a baseline of typical log behavior rather than requiring an explicit signature for every failure. \cite{Landauer2023LogADSurvey,Du2017DeepLog}
 This is relevant for long-tail failures such as new stack traces, unexpected integration errors, or previously unseen combinations of events.\cite{Ma2024PractitionersLogAD}
 
@@ -102,7 +102,7 @@ The aim of the prototype is to conduct a controlled comparison between three str
 \subsection{Objective}
 Manual log monitoring does not scale for high-volume and heterogeneous LoRaWAN pipeline logs and provides limited prioritization for incident events.
 Rule-based detection is precise for known signatures but struggles with message variability and previously unseen events.
-This work therefore evaluates whether an ML component and a rules-first hybrid strategy is able to improve automated classification and decision support compared to a rule-only method.
+This work therefore evaluates if an Machine Learning component and a rules-first hybrid strategy is able to improve automated classification and decision support compared to a rule-only method.
 
 \subsection{Target Audience}
 The target audience are technical stakeholders: IoT/backend engineers, applied Data/ML Engineers and operations/SRE roles, working with LoRaWAN data pipelines.
@@ -112,7 +112,7 @@ The intended use is to provide a reproducible prototype workflow for structured 
 The outcome of this thesis should be that readers are able to reproduce:
 (i) how to structure LoRaWAN pipeline logs into machine-processable events,
 (ii) how to implement a rule-based baseline,
-(iii) how to train and apply an ML classifier with confidence-based handling of \textit{Unknown} events.
+(iii) how to train and apply an Machine Learning classifier with confidence-based handling of \textit{Unknown} events.
 
 \subsection{Work Steps}
 The work is organized into the following technical steps:
@@ -122,25 +122,25 @@ The work is organized into the following technical steps:
     \item \textbf{Rule-Based Classifier:} Implementation of a deterministic detector that assigns classes and priorities for explicit, stable signatures. \textit{Unknown} events should be routed to a residual category.
     \item \textbf{Machine Learning-Based Classifier:} Implementation of an Machine Learning-based classifier with engineered features and calculated confidence estimates.
     \item \textbf{Hybrid Classifier:} Implementation of a rule-based Classifier first and a Machine Learning-based classifier classifying based of confidence for \textit{Unknown} events.
-    \item \textbf{Aggregation and Storage:} Aggregatation of events over time windows and storing summaries like confidence statistics or affected entities inside MariaDB.
+    \item \textbf{Aggregation and Storage:} Aggregation of events over time windows and storing summaries like confidence statistics or affected entities inside MariaDB.
     \item \textbf{Evaluation:} Definition of a test protocol with two scenarios:
           \begin{itemize}
-              \item \textit{Known-classes test (closed-set):} Evaluation of how well rule-based, ML-based, and hybrid approaches classify log events into the predefined error classes.
+              \item \textit{Known-classes test (closed-set):} Evaluation of how well rule-based, Machine Learning-based, and hybrid approaches classify log events into the predefined error classes.
               \item \textit{Novelty test (open-set):} Creation of a ``unknown'' test set by holding out classes or log templates during training. Evaluation of whether the approaches correctly assign to \textit{Unknown} while still classifying the remaining known cases.
           \end{itemize}
 
-    \item \textbf{Empirical Comparison and Reporting:} Comparison of rule-based, ML-based, and hybrid approaches with metrics at two levels:
+    \item \textbf{Comparison and Reporting:} Comparison of rule-based, Machine Learning-based, and hybrid approaches with metrics at two levels:
           \begin{enumerate}
               \item log-line level with precision/recall/F1 and confusion analysis
               \item time-window/incident level with quality of aggregated summaries
           \end{enumerate}
-          The novelty test reports \textit{Unknown-Recall} and \textit{False-Reject Rate}. The results are summarized and could be used for guidance on when rules, ML, or a hybrid approach is most suitable.
+          The novelty test reports \textit{Unknown-Recall} and \textit{False-Reject Rate}. The results are summarized and could be used for guidance on when rules, Machine Learning, or a hybrid approach is most suitable.
 \end{enumerate}
 
 \newpage
 
 
-\section{Research Questions / Hypotheses}
+\section{Research Questions}
 
 \textbf{Main Research Question (MRQ):}\\
 How effective is a hybrid approach for automated error detection, classification and aggregation in LoRaWAN-based IoT data pipelines?
@@ -202,7 +202,6 @@ Beyond the Research Question results, the thesis is expected to deliver these ou
 \begin{itemize}
     \item A technical introduction to LoRaWAN and the observed IoT data pipeline context.
     \item A technical overview of ETL pipelines and the advantages of logging.
-    \item An analysis of real LoRaWAN log data from an enterprise setting.
     \item A reproducible Python prototype for automated log classification and temporal aggregation, storing the events and summaries in MariaDB.
     \item Structured error overview replacing raw logs.
 \end{itemize}
@@ -220,7 +219,7 @@ The outcome will provide measurable evidence of performance differences, includi
 \newline\newline
 For \textbf{SRQ3}, the class analysis produces a mapping that explains which error classes are most effectively handled by the three strategies.
 The result will relate observed performance patterns to class characteristics such as stability, variability, context and rarity.
-This is expected to offer practiceable guidance on how to prioritize rule development, where ML adds operational value, or how this could be used for \textit{Unknown} cases as input for iterative refinement of the class catalogue and the rule base.
+This is expected to offer practiceable guidance on how to prioritize rule development, where Machine Learning adds operational value, or how this could be used for \textit{Unknown} cases as input for iterative refinement of the class catalogue and the rule base.
 
 \newpage
 
@@ -233,21 +232,21 @@ This is expected to offer practiceable guidance on how to prioritize rule develo
             >{\raggedright\arraybackslash}X
             >{\raggedright\arraybackslash}X}
         \toprule
-        \textbf{Research questions / hypothesis}                                                                                                                                              &
-        \textbf{Method(s)}                                                                                                                                                                    &
-        \textbf{Expected kind of result}                                                                                                                                                        \\
+        \textbf{Research questions / hypothesis}                                                                                                                                                            &
+        \textbf{Method(s)}                                                                                                                                                                                  &
+        \textbf{Expected kind of result}                                                                                                                                                                      \\
         \midrule
-        SRQ1: Which practically relevant error and warning classes can be derived from real LoRaWAN pipeline logs and formalized into a consistent class catalogue?                           &
-        Qualitative content analysis; descriptive statistics                                                                                                                                  &
-        A class catalogue with clear definitions, boundaries and priorities including representative log patterns.                                                                              \\
+        SRQ1: Which practically relevant error and warning classes can be derived from real LoRaWAN pipeline logs and formalized into a consistent class catalogue?                                         &
+        Qualitative content analysis; descriptive statistics                                                                                                                                                &
+        A class catalogue with clear definitions, boundaries and priorities including representative log patterns.                                                                                            \\
         \midrule
-        SRQ2: How do rule-based, ML-based, and hybrid approaches differ in measurable performance at log-line and time-window/incident level?                                                 &
-        Controlled comparative evaluation; quantitative performance measurement                                                                                                               &
-        An empirical comparison report including per-class metrics on log-line level and monitoring-oriented evaluation on time-window/incident level for all three approaches.                 \\
+        SRQ2: How do rule-based, Machine Learning-based, and hybrid approaches differ in measurable performance at log-line and time-window/incident level?                                                 &
+        Controlled comparative evaluation; quantitative performance measurement                                                                                                                             &
+        An empirical comparison report including per-class metrics on log-line level and monitoring-oriented evaluation on time-window/incident level for all three approaches.                               \\
         \midrule
-        SRQ3: Which error classes are better addressed by deterministic rules and which benefit more from ML-based classification, and which class characteristics explain these differences? &
-        Per-class analysis; deductive interpretation                                                                                                                                          &
-        An evidence-based suitability mapping of error classes to detection strategy, with explanations based on observable class characteristics.                                              \\
+        SRQ3: Which error classes are better addressed by deterministic rules and which benefit more from Machine Learning-based classification, and which class characteristics explain these differences? &
+        Per-class analysis; deductive interpretation                                                                                                                                                        &
+        An evidence-based suitability mapping of error classes to detection strategy, with explanations based on observable class characteristics.                                                            \\
         %\midrule
         %H1: Compared to a rule-only baseline, a rules-first hybrid approach achieves higher overall utility while maintaining comparable precision for stable-signature classes.              &
         %$Hypothesis testing via SRQ2 metrics and SRQ3 interpretation                                                                                                                           &
